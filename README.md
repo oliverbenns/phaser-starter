@@ -2,7 +2,7 @@
 
 ![Phaser avatar studying](./public/assets/img/study.png)
 
-Simple starter project to get your Phaser game up and running with ease. With Webpack, ES6 transpiling, page reloading and Github page publishing.
+Simple starter project to get a Phaser game environment up and running with ease. With Webpack, ES6 transpiling, page reloading and Github page publishing.
 
 ## Install
 - Get the files

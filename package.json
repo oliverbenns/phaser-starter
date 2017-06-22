@@ -1,7 +1,7 @@
 {
   "name": "phaser-starter",
   "version": "1.0.0",
-  "description": "Simple starter project to get your Phaser game up and running with ease. With Webpack, ES6 transpiling, page reloading and Github page publishing.",
+  "description": "Simple starter project to get a Phaser game environment up and running with ease. With Webpack, ES6 transpiling, page reloading and Github page publishing.",
   "main": "index.js",
   "repository": {
     "type": "git",
