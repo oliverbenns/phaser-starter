@@ -8,9 +8,9 @@
     "url": "git+https://github.com/oliverbenns/phaser-starter.git"
   },
   "author": {
-    "name" : "Oliver Benns",
-    "email" : "info@oliverbenns.com",
-    "url" : "https://oliverbenns.com"
+    "name": "Oliver Benns",
+    "email": "info@oliverbenns.com",
+    "url": "https://oliverbenns.com"
   },
   "license": "MIT",
   "bugs": {
@@ -23,7 +23,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
     "expose-loader": "^0.7.3",
-    "webpack": "^2.5.0",
+    "webpack": "^3.4.1",
     "webpack-dev-server": "^2.5.0"
   },
   "scripts": {
