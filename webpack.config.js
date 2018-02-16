@@ -36,12 +36,23 @@ const config = {
       }
     ],
   },
-  plugins: NODE_ENV === 'production' ? [ new webpack.optimize.UglifyJsPlugin() ] : [],
+  plugins: [
+    new webpack.DefinePlugin({
+      CANVAS_RENDERER: true,
+      WEBGL_RENDERER: true,
+    })
+  ],
   devServer: {
     contentBase: BUILD_DIR,
     port: 8080,
     stats: 'minimal',
   },
 };
+
+if (NODE_ENV === 'production') {
+  config.plugins.push(
+    new webpack.optimize.UglifyJsPlugin()
+  );
+}
 
 module.exports = config;
