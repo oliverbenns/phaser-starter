@@ -30,28 +30,7 @@ const config = {
         use: ['babel-loader'],
         include: APP_DIR,
       },
-      // https://github.com/photonstorm/phaser/issues/2762
       {
-        test: /pixi\.js/,
-        use: [{
-          loader: 'expose-loader',
-          options: 'PIXI',
-        }],
-      },
-      {
-        test: /phaser-split\.js$/,
-        use: [{
-          loader: 'expose-loader',
-          options: 'Phaser',
-        }],
-      },
-      {
-        test: /p2\.js/,
-        use: [{
-          loader: 'expose-loader',
-          options: 'p2',
-        }],
-      },
     ],
   },
   plugins: NODE_ENV === 'production' ? [ new webpack.optimize.UglifyJsPlugin() ] : [],
