@@ -7,7 +7,7 @@ Simple starter project to get a Phaser game environment up and running with ease
 ## Install
 - Get the files
   - `git clone https://github.com/oliverbenns/phaser-starter.git`
-  - **or** download a r [zip/tar.gz](https://github.com/oliverbenns/phaser-starter/releases)
+  - **or** download [zip/tar.gz](https://github.com/oliverbenns/phaser-starter/releases)
 - `cd phaser-starter`
 - `nvm install`
 - `npm install`
