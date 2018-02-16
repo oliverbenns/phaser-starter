@@ -32,6 +32,6 @@
     "deploy": "NODE_ENV=production webpack && chmod +x ./deploy.sh && ./deploy.sh"
   },
   "dependencies": {
-    "phaser": "^3.0.0"
+    "phaser": "^3.1.0"
   }
 }
