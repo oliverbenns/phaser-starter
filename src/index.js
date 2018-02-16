@@ -1,6 +1,6 @@
 import 'phaser';
 
-import pkg from '../package.json';
+import pkg from '../node_modules/phaser/package.json';
 
 // This is the entry point of your game.
 
@@ -25,7 +25,7 @@ function preload() {
 function create() {
   const centerX = width / 2;
   const centerY = height / 2;
-  const welcomeMessage = `Welcome to Phaser ${pkg.dependencies.phaser.substr(1)}`;
+  const welcomeMessage = `Welcome to Phaser ${pkg.version}`;
 
   this.add.image(centerX, centerY * 1.2, 'study');
 
