@@ -14,14 +14,11 @@ const config = {
     filename: 'assets/js/bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.json'],
     modules: [APP_DIR, 'node_modules'],
     alias: {
       // https://github.com/webpack/webpack/issues/4666
       constants: `${APP_DIR}/constants`,
-      phaser: path.join(PHASER_DIR, 'build/custom/phaser-split.js'),
-      pixi: path.join(PHASER_DIR, 'build/custom/pixi.js'),
-      p2: path.join(PHASER_DIR, 'build/custom/p2.js'),
     },
   },
   devtool: 'source-map',
@@ -33,36 +30,29 @@ const config = {
         use: ['babel-loader'],
         include: APP_DIR,
       },
-      // https://github.com/photonstorm/phaser/issues/2762
       {
-        test: /pixi\.js/,
-        use: [{
-          loader: 'expose-loader',
-          options: 'PIXI',
-        }],
-      },
-      {
-        test: /phaser-split\.js$/,
-        use: [{
-          loader: 'expose-loader',
-          options: 'Phaser',
-        }],
-      },
-      {
-        test: /p2\.js/,
-        use: [{
-          loader: 'expose-loader',
-          options: 'p2',
-        }],
-      },
+        test: [/\.vert$/, /\.frag$/],
+        use: ['raw-loader'],
+      }
     ],
   },
-  plugins: NODE_ENV === 'production' ? [ new webpack.optimize.UglifyJsPlugin() ] : [],
+  plugins: [
+    new webpack.DefinePlugin({
+      CANVAS_RENDERER: true,
+      WEBGL_RENDERER: true,
+    })
+  ],
   devServer: {
     contentBase: BUILD_DIR,
     port: 8080,
     stats: 'minimal',
   },
 };
+
+if (NODE_ENV === 'production') {
+  config.plugins.push(
+    new webpack.optimize.UglifyJsPlugin()
+  );
+}
 
 module.exports = config;
