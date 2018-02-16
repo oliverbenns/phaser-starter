@@ -11,8 +11,6 @@ const config = {
   width,
   height,
   type: Phaser.AUTO,
-  transparent: false,
-  antialias: true,
   scene: { preload, create },
 };
 
