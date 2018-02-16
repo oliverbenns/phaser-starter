@@ -19,9 +19,6 @@ const config = {
     alias: {
       // https://github.com/webpack/webpack/issues/4666
       constants: `${APP_DIR}/constants`,
-      phaser: path.join(PHASER_DIR, 'build/custom/phaser-split.js'),
-      pixi: path.join(PHASER_DIR, 'build/custom/pixi.js'),
-      p2: path.join(PHASER_DIR, 'build/custom/p2.js'),
     },
   },
   devtool: 'source-map',
