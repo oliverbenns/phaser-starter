@@ -14,7 +14,7 @@ const config = {
     filename: 'assets/js/bundle.js',
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.json'],
     modules: [APP_DIR, 'node_modules'],
     alias: {
       // https://github.com/webpack/webpack/issues/4666
