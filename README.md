@@ -5,9 +5,10 @@
 Simple starter project to get a Phaser game environment up and running with ease. With Webpack, ES6 transpiling, page reloading and Github page publishing.
 
 ## Install
-- Get the files
-  - `git clone https://github.com/oliverbenns/phaser-starter.git`
-  - **or** download [zip/tar.gz](https://github.com/oliverbenns/phaser-starter/releases)
+- Get the files by either:
+  - Forking this repository
+  - Downloading a [zip/tar.gz](https://github.com/oliverbenns/phaser-starter/releases)
+  - Cloning this repository with `git clone https://github.com/oliverbenns/phaser-starter.git`
 - `cd phaser-starter`
 - `nvm install`
 - `npm install`
