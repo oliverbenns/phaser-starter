@@ -31,6 +31,9 @@ const config = {
         include: APP_DIR,
       },
       {
+        test: [/\.vert$/, /\.frag$/],
+        use: ['raw-loader'],
+      }
     ],
   },
   plugins: NODE_ENV === 'production' ? [ new webpack.optimize.UglifyJsPlugin() ] : [],
