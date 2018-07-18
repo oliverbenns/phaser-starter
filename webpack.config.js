@@ -27,7 +27,7 @@ const config = (_, argv) => ({
     ],
   },
   stats: 'minimal',
-  devtool: argv.mode === 'development' ? 'inline-source-map' : 'source-map',
+  devtool: 'source-map',
   performance: {
     hints: false,
   },
