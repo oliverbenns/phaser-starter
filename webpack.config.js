@@ -2,12 +2,12 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const config = (_, argv) => ({
+const config = {
   output: {
     filename: '[hash].js',
   },
   resolve: {
-    modules: ['src', 'node_modules']
+    modules: ['src', 'node_modules'],
   },
   module: {
     rules: [
@@ -45,6 +45,6 @@ const config = (_, argv) => ({
     port: 8080,
     stats: 'minimal',
   },
-});
+};
 
 module.exports = config;
