@@ -19,7 +19,7 @@ Minimal starter project to get a Phaser game environment up and running with eas
 
 ## Build
 - `npm run build`
-- Javascript bundle will be in `/public/assets/bundle.js`
+- All game files will be in `/dist`
 
 ## Phaser 2
 
