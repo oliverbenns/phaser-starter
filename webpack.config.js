@@ -21,7 +21,7 @@ const config = (env, argv) => ({
         use: 'file-loader',
       },
       {
-        test: [/\.vert$/, /\.frag$/],
+        test: /\.(vert|frag)$/,
         use: 'raw-loader',
       },
     ],
