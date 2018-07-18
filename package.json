@@ -1,7 +1,7 @@
 {
   "name": "phaser-starter",
   "version": "2.0.0",
-  "description": "Simple starter project to get a Phaser game environment up and running with ease. With Webpack, ES6 transpiling, page reloading and Github page publishing.",
+  "description": "Minimal starter project to get a Phaser game environment up and running with ease.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oliverbenns/phaser-starter.git"
@@ -28,8 +28,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "rm -rf dist && webpack --mode production",
-    "deploy": "npm run build && chmod +x ./deploy.sh && ./deploy.sh"
+    "build": "rm -rf dist && webpack --mode production"
   },
   "dependencies": {
     "phaser": "^3.11.0"
