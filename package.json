@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "webpack-dev-server --mode development",
-    "build": "webpack --mode production",
+    "build": "rm -rf dist && webpack --mode production",
     "deploy": "npm run build && chmod +x ./deploy.sh && ./deploy.sh"
   },
   "dependencies": {
