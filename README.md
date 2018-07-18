@@ -1,6 +1,6 @@
 # Phaser Starter
 
-![Phaser avatar studying](./src/study.png)
+![Phaser avatar studying](./src/img/study.png)
 
 Simple starter project to get a Phaser game environment up and running with ease. With Webpack, ES6 transpiling, page reloading and Github page publishing.
 

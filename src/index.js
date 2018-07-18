@@ -1,6 +1,6 @@
 import 'phaser';
 import pkg from 'phaser/package.json';
-import introImage from 'study.png';
+import introImage from 'img/study.png';
 
 // This is the entry point of your game.
 
