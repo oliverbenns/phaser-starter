@@ -37,6 +37,7 @@ const config = (_, argv) => ({
       WEBGL_RENDERER: true,
     }),
     new HtmlWebpackPlugin({
+      favicon: 'src/img/favicon.png',
       template: 'src/index.html',
     }),
   ],
