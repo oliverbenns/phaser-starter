@@ -1,58 +1,49 @@
 const webpack = require('webpack');
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const APP_DIR = path.resolve(__dirname, 'src');
-const BUILD_DIR = path.resolve(__dirname, 'public');
-const PHASER_DIR = path.join(__dirname, '/node_modules/phaser');
-const NODE_ENV = process.env.NODE_ENV;
-
-
-const config = {
-  entry: `${APP_DIR}/index.js`,
+const config = (env, argv) => ({
   output: {
-    path: BUILD_DIR,
-    filename: 'assets/js/bundle.js',
+    filename: '[hash].js',
   },
   resolve: {
-    extensions: ['.js', '.json'],
-    modules: [APP_DIR, 'node_modules'],
-    alias: {
-      // https://github.com/webpack/webpack/issues/4666
-      constants: `${APP_DIR}/constants`,
-    },
+    modules: ['src', 'node_modules']
   },
-  devtool: 'source-map',
   module: {
     rules: [
       {
         test: /\.js$/,
+        use: 'babel-loader',
         exclude: /node_modules/,
-        use: ['babel-loader'],
-        include: APP_DIR,
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: 'file-loader',
       },
       {
         test: [/\.vert$/, /\.frag$/],
-        use: ['raw-loader'],
-      }
+        use: 'raw-loader',
+      },
     ],
+  },
+  stats: 'minimal',
+  devtool: argv.mode === 'development' ? 'inline-source-map' : 'source-map',
+  performance: {
+    hints: false,
   },
   plugins: [
     new webpack.DefinePlugin({
       CANVAS_RENDERER: true,
       WEBGL_RENDERER: true,
-    })
+    }),
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+    }),
   ],
   devServer: {
-    contentBase: BUILD_DIR,
     port: 8080,
     stats: 'minimal',
   },
-};
-
-if (NODE_ENV === 'production') {
-  config.plugins.push(
-    new webpack.optimize.UglifyJsPlugin()
-  );
-}
+});
 
 module.exports = config;

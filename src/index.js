@@ -1,6 +1,6 @@
 import 'phaser';
-
-import pkg from '../node_modules/phaser/package.json';
+import pkg from 'phaser/package.json';
+import introImage from 'study.png';
 
 // This is the entry point of your game.
 
@@ -17,7 +17,7 @@ const config = {
 const game = new Phaser.Game(config);
 
 function preload() {
-  this.load.image('study', 'assets/img/study.png');
+  this.load.image('study', introImage);
 }
 
 function create() {

@@ -1,6 +1,6 @@
 # Phaser Starter
 
-![Phaser avatar studying](./public/assets/img/study.png)
+![Phaser avatar studying](./src/study.png)
 
 Simple starter project to get a Phaser game environment up and running with ease. With Webpack, ES6 transpiling, page reloading and Github page publishing.
 
@@ -14,7 +14,7 @@ Simple starter project to get a Phaser game environment up and running with ease
 - `npm install`
 
 ## Development
-- `npm run develop`
+- `npm start`
 - Open `http://localhost:8080`
 
 ## Build
