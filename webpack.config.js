@@ -1,5 +1,5 @@
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
   output: {
@@ -12,8 +12,13 @@ const config = {
     rules: [
       {
         test: /\.js$/,
-        use: 'babel-loader',
         exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.(png|jpg|gif)$/,
@@ -44,6 +49,6 @@ const config = {
     port: 8080,
     stats: 'minimal',
   },
-};
+}
 
-module.exports = config;
+module.exports = config
