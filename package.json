@@ -1,6 +1,6 @@
 {
   "name": "phaser-starter",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Minimal starter project to get a Phaser game environment up and running with ease.",
   "repository": {
     "type": "git",
